@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AZMI DIGITAL STORE — Premium Digital Products</title>
+  <meta name="description" content="Temukan produk digital premium di AZMI DIGITAL STORE.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top site-nav">
+    <div class="container py-2">
+      <a class="navbar-brand brand" href="#"><span class="brand-mark">A</span> AZMI<span class="gold">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+          <li class="nav-item"><button class="btn btn-outline-gold position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas"><i class="bi bi-bag"></i> Keranjang <span id="cartCount" class="cart-count">0</span></button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center min-vh-hero">
+          <div class="col-lg-7 py-5">
+            <p class="eyebrow"><span></span> PREMIUM DIGITAL MARKETPLACE</p>
+            <h1>Upgrade Your<br><span class="gold">Digital Lifestyle.</span></h1>
+            <p class="hero-copy">Temukan pilihan produk digital berkualitas untuk mendukung kreativitas, produktivitas, dan kebutuhan digitalmu.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#products" class="btn btn-gold btn-lg">Jelajahi Produk <i class="bi bi-arrow-up-right ms-2"></i></a>
+              <a href="#about" class="btn btn-outline-light btn-lg">Tentang Kami</a>
+            </div>
+            <div class="hero-note mt-5"><i class="bi bi-shield-check gold"></i> Pilihan produk digital dalam satu tempat</div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="hero-art">
+              <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+              <div class="hero-tile"><span class="tile-kicker">AZMI / DIGITAL</span><i class="bi bi-gem"></i><strong>Designed<br>for your<br>digital world.</strong><span class="tile-line"></span><small>CURATED DIGITAL GOODS</small></div>
+              <div class="floating-tag tag-top"><i class="bi bi-stars"></i> Premium Selection</div>
+              <div class="floating-tag tag-bottom">EST. 2026 <span class="gold">✦</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container"><div class="row g-3 text-center">
+        <div class="col-4"><i class="bi bi-lightning-charge gold"></i><span>Proses praktis</span></div>
+        <div class="col-4"><i class="bi bi-gem gold"></i><span>Produk pilihan</span></div>
+        <div class="col-4"><i class="bi bi-headset gold"></i><span>Dukungan pelanggan</span></div>
+      </div></div>
+    </section>
+
+    <section id="products" class="section-space">
+      <div class="container">
+        <div class="section-heading d-flex flex-wrap justify-content-between align-items-end gap-3">
+          <div><p class="eyebrow">OUR COLLECTION</p><h2>Explore <span class="gold">Products.</span></h2><p class="muted mb-0">Temukan produk digital yang sesuai dengan kebutuhanmu.</p></div>
+          <div class="search-wrap"><i class="bi bi-search"></i><input id="searchInput" type="search" placeholder="Cari produk..." aria-label="Cari produk"></div>
+        </div>
+        <div id="categoryFilters" class="category-filters d-flex flex-wrap gap-2 my-4"></div>
+        <div id="productGrid" class="row g-4"></div>
+        <div id="emptyProducts" class="empty-state d-none">Produk tidak ditemukan. Coba kata kunci lain.</div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section section-space">
+      <div class="container"><div class="row align-items-center g-5">
+        <div class="col-lg-6"><p class="eyebrow">THE AZMI EXPERIENCE</p><h2>Simple choice.<br><span class="gold">Premium experience.</span></h2><p class="muted mt-3">AZMI DIGITAL STORE hadir sebagai etalase produk digital yang mengutamakan kemudahan, tampilan profesional, dan pengalaman berbelanja yang nyaman.</p></div>
+        <div class="col-lg-6"><div class="about-panel"><div class="about-icon"><i class="bi bi-stars"></i></div><h3>Digital, made simpler.</h3><p class="muted mb-0">Pilih produk, masukkan ke keranjang, lalu kirim pesanan melalui proses checkout yang praktis.</p></div></div>
+      </div></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer"><div class="container py-5"><div class="row g-4">
+    <div class="col-md-6"><a class="brand text-decoration-none" href="#"><span class="brand-mark">A</span> AZMI<span class="gold">.</span></a><p class="muted mt-3">Premium digital products for everyday needs.</p></div>
+    <div class="col-md-3"><h6>Explore</h6><a href="#home">Home</a><a href="#products">Produk</a><a href="#about">Tentang Kami</a></div>
+    <div class="col-md-3"><h6>Contact</h6><p class="muted small">Hubungi admin untuk informasi produk dan pesanan.</p><a href="mailto:hello@example.com">hello@example.com</a></div>
+  </div><div class="footer-bottom mt-4 pt-3">© <span id="year"></span> AZMI DIGITAL STORE. All rights reserved.</div></div></footer>
+
+  <div class="offcanvas offcanvas-end cart-panel" tabindex="-1" id="cartCanvas">
+    <div class="offcanvas-header"><h5 class="offcanvas-title">Keranjang Belanja</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+    <div class="offcanvas-body d-flex flex-column"><div id="cartItems" class="flex-grow-1"></div><div class="cart-summary"><div class="d-flex justify-content-between mb-3"><span>Total</span><strong id="cartTotal">Rp0</strong></div><button id="checkoutBtn" class="btn btn-gold w-100">Lanjut Checkout <i class="bi bi-arrow-right ms-2"></i></button></div></div>
+  </div>
+
+  <div class="modal fade" id="productModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content dark-modal"><div class="modal-header border-secondary"><h5 class="modal-title">Detail Produk</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body" id="productDetail"></div></div></div></div>
+
+  <div class="modal fade" id="checkoutModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content dark-modal"><div class="modal-header border-secondary"><h5 class="modal-title">Checkout Pesanan</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">
+    <form id="checkoutForm" class="checkout-form">
+      <div class="mb-3"><label class="form-label">Nama lengkap</label><input class="form-control" name="customer" required maxlength="80"></div>
+      <div class="mb-3"><label class="form-label">Email aktif</label><input class="form-control" type="email" name="email" required></div>
+      <div class="mb-3"><label class="form-label">Nomor WhatsApp</label><input class="form-control" name="phone" required maxlength="20"></div>
+      <div class="mb-3"><label class="form-label">Catatan (opsional)</label><textarea class="form-control" name="note" rows="2"></textarea></div>
+      <div class="checkout-total d-flex justify-content-between"><span>Total pesanan</span><strong id="checkoutTotal">Rp0</strong></div>
+      <p class="small muted mt-3">Dengan mengirim pesanan, data pesanan akan disimpan pada browser ini. Admin dapat memprosesnya pada perangkat yang sama.</p>
+      <button class="btn btn-gold w-100 mt-2" type="submit">Kirim Pesanan</button>
+    </form>
+    <div id="orderSuccess" class="text-center d-none py-4"><i class="bi bi-check-circle gold display-4"></i><h4 class="mt-3">Pesanan berhasil dibuat!</h4><p class="muted">Nomor pesananmu:</p><strong id="orderNumber" class="gold"></strong><p class="small muted mt-3">Simpan nomor pesanan ini untuk referensi.</p><button class="btn btn-outline-gold mt-2" data-bs-dismiss="modal">Selesai</button></div>
+  </div></div></div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — AZMI DIGITAL STORE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <div id="loginScreen" class="login-screen"><form id="loginForm" class="login-card">
+    <a class="brand text-decoration-none" href="index.html"><span class="brand-mark">A</span> AZMI<span class="gold">.</span></a>
+    <p class="eyebrow mt-4">ADMINISTRATOR ACCESS</p><h2>Welcome back.</h2><p class="muted small">Masuk untuk mengelola toko.</p>
+    <label class="form-label mt-3">Username</label><input class="form-control" name="username" required autocomplete="username">
+    <label class="form-label mt-3">Password</label><input class="form-control" name="password" type="password" required autocomplete="current-password">
+    <div id="loginError" class="text-danger small mt-2"></div><button class="btn btn-gold w-100 mt-4">Login Admin</button>
+    <p class="muted tiny mt-3">Demo awal: <b>admin</b> / <b>azmi123</b></p>
+    <a href="index.html" class="back-link d-block mt-3">← Kembali ke toko</a>
+  </form></div>
+
+  <div id="adminApp" class="d-none">
+    <nav class="navbar navbar-dark site-nav"><div class="container-fluid px-4"><a class="brand text-decoration-none" href="index.html"><span class="brand-mark">A</span> AZMI<span class="gold">.</span> <small class="admin-label">ADMIN</small></a><div class="d-flex gap-2"><a href="index.html" class="btn btn-outline-gold btn-sm">Lihat Toko</a><button id="logoutBtn" class="btn btn-outline-light btn-sm">Keluar</button></div></div></nav>
+    <div class="container-fluid p-4 p-lg-5">
+      <div class="mb-4"><p class="eyebrow">CONTROL CENTER</p><h1 class="admin-title">Dashboard <span class="gold">Overview.</span></h1><p class="muted">Kelola produk dan pantau pesanan toko.</p></div>
+      <div class="row g-3 mb-5">
+        <div class="col-6 col-xl-3"><div class="stat-card"><span>Total Produk</span><strong id="statProducts">0</strong><i class="bi bi-box-seam"></i></div></div>
+        <div class="col-6 col-xl-3"><div class="stat-card"><span>Total Pesanan</span><strong id="statOrders">0</strong><i class="bi bi-receipt"></i></div></div>
+        <div class="col-6 col-xl-3"><div class="stat-card"><span>Menunggu</span><strong id="statPending">0</strong><i class="bi bi-hourglass-split"></i></div></div>
+        <div class="col-6 col-xl-3"><div class="stat-card"><span>Pesanan selesai</span><strong id="statDone">0</strong><i class="bi bi-check2-circle"></i></div></div>
+      </div>
+      <section class="admin-section mb-5">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3"><div><p class="eyebrow mb-1">INVENTORY</p><h3>Kelola Produk</h3></div><button id="addProductBtn" class="btn btn-gold"><i class="bi bi-plus-lg me-2"></i>Tambah Produk</button></div>
+        <div class="table-responsive"><table class="table admin-table align-middle"><thead><tr><th>Produk</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Aksi</th></tr></thead><tbody id="adminProducts"></tbody></table></div>
+      </section>
+      <section class="admin-section">
+        <div class="mb-3"><p class="eyebrow mb-1">TRANSACTIONS</p><h3>Daftar Pesanan</h3></div>
+        <div class="table-responsive"><table class="table admin-table align-middle"><thead><tr><th>No. Pesanan</th><th>Pelanggan</th><th>Tanggal</th><th>Total</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="adminOrders"></tbody></table></div>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editProductModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content dark-modal"><div class="modal-header border-secondary"><h5 class="modal-title" id="productFormTitle">Tambah Produk</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><form id="productForm">
+    <input type="hidden" name="id"><label class="form-label">Nama produk</label><input class="form-control mb-3" name="name" required>
+    <label class="form-label">Kategori</label><input class="form-control mb-3" name="category" required placeholder="Contoh: Template">
+    <label class="form-label">Harga (Rupiah)</label><input class="form-control mb-3" name="price" type="number" min="0" required>
+    <label class="form-label">Stok / kuota</label><input class="form-control mb-3" name="stock" type="number" min="0" required>
+    <label class="form-label">URL gambar (opsional)</label><input class="form-control mb-3" name="image" placeholder="https://...">
+    <label class="form-label">Deskripsi</label><textarea class="form-control mb-3" name="description" rows="3" required></textarea>
+    <button class="btn btn-gold w-100">Simpan Produk</button>
+  </form></div></div></div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
